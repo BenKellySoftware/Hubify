@@ -1,0 +1,64 @@
+<html>
+<head>
+	<link type='type/css' rel='stylesheet' href='style.css'/>
+	<title>Hubify</title>
+	<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="libraries/jquery.cookie.js"></script>
+	
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+</head>
+<body>
+	<div id="Topbar">
+		<ul id="TabSelector">
+			<li onClick="tabSwitch('Home', this)">Home</li>
+			<li onClick="tabSwitch('Profile', this)" id="TabName" class="active"></li>
+			<li onClick="tabSwitch('Matches', this)">Matches</li>
+			<li id="HubList">Hubs<ul>
+				<li onClick="sortList()">Sort Alphabetically</li>
+			</ul></li>
+			<li onClick="logout()">Logout</li>
+		</ul>
+		<div id="SearchBar">
+			<div style="width: 1000px;"><img id="SearchIcon" src="libraries/search.jpg"><input></div>
+			<ul></ul>
+		</div>
+	</div>
+	<!-- <div id="Sidebar">test</div> -->
+	<div id="TabView">
+		<div id="TabHome" class="Tab">
+			<div id="FormTitle">Under Development</div>
+		</div>
+		<div id="TabProfile" class="Tab">
+			<div id="ProfileTop">
+				<div id="ProfileIcon"></div>
+				<div id="ProfileName"></div>
+			</div>
+			<div id="ProfileInfo">
+				<div id="ProfileAge"><label>Age:</label><div></div></div>
+				<div id="ProfileSex"><label>Sex:</label><div></div></div>
+				<div id="ProfileBio"><label>Bio:</label><div></div></div>
+			</div>
+			<div id="ProfileLikes"><div>Top Likes:</div><ul></ul></div>
+		</div>
+		<div id="TabMatches" class="Tab">
+			<div id="FormTitle">Under Development</div>
+		</div>
+		<div id="TabHubs" class="Tab">
+			<div id="PostBar"><input id="InputTitle" type="text" onFocus="$('#PostBar').animate({borderBottomLeftRadius: 0, borderBottomRightRadius: 0}, 200, function() { $('#PostForm').animate({height: 150}); $('#Posts').animate({top: 180});});" placeholder="Make a post"><button id="Like" onclick="toggleHub(true)">Like</button><button id="Unlike" onclick="toggleHub(false)">Unlike</button></div>
+			<div id="PostForm">
+				<div id="InputType">Text Post:<input type="radio" name="type" value="T" checked onChange="$('#InputText').show();$('#InputImage, #InputCaption').hide();">Image Post:<input type="radio" name="type" value="I" onChange="$('#InputText').hide();$('#InputImage, #InputCaption').show();"></div>
+				<div id="InputText"><label>Text:</label><input type="text"></div> 
+				<div id="InputImage"><label for="Icon">Image:</label>
+					<input id="ImageSubmit" type="file" name="filename" accept="image/gif, image/jpeg, image/png" onchange="$(this).siblings('input').val($(this).val().substring(12))">
+					<input type="text" onclick="$('#ImageSubmit').click()" placeholder="Click to Upload Image" readonly>
+				</div>
+				<div id="InputCaption"><label>Caption:</label><input type="text"></div>
+				<div><button onClick="submitPost()">Submit</button><div style="width: 5px; height: 20px; float: left;"></div><button onClick="cancelPost()">Cancel</button></div>
+			</div>
+			<div id="Posts"></div>
+		</div>
+	</div>
+</body>
+</html>

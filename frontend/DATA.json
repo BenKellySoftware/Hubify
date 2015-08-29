@@ -1,0 +1,41 @@
+{
+    "Users": [
+    ],
+    "Likes": [
+        {
+            "Name": "Computers",
+            "Photo": "Head.png",
+            "Posts": []
+        },
+        {
+            "Name": "Comics",
+            "Photo": "Head.jpg",
+            "Posts": []
+        },
+        {
+            "Name": "Video Games",
+            "Photo": "Head.png",
+            "Posts": []
+        },
+        {
+            "Name": "Movies",
+            "Photo": "Head.png",
+            "Posts": []
+        },
+        {
+            "Name": "Snowboarding",
+            "Photo": "Head.png",
+            "Posts": []
+        },
+        {
+            "Name": "Anime",
+            "Photo": "Head.jpg",
+            "Posts": []
+        },
+        {
+            "Name": "TV",
+            "Photo": "Head.png",
+            "Posts": []
+        }
+    ]
+}

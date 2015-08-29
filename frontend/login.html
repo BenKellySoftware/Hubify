@@ -1,0 +1,22 @@
+<html>
+<head>
+	<link type='type/css' rel='stylesheet' href='style.css'/>
+	<title>Hubify - Login</title>
+	<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+	<script src="libraries/jquery.min.js"></script>
+	<script src="libraries/jquery.cookie.js"></script>
+
+	<script type="text/javascript" src="login.js"></script>
+	<script type="text/javascript" src="code.js"></script>
+</head>
+<body>
+<div id="MainWrapper">
+	<div id="FormTitle">Hubify</div>
+	<div id="FormWrapper">
+		<div><label for="Email">Email:</label><input id="Email"></div>
+		<div><label for="Password">Password:</label><input id="Password" type="password"></div>
+		<div><button onClick="login()">Login</button></div>
+	</div>
+	<div id="CreateWrapper"> Don't Have an account? <a href="create.html"><button>Create User</button></a></div>
+</body>
+</html>

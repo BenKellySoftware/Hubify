@@ -1,0 +1,417 @@
+/*Framework*/
+	* {
+		margin: 0; 
+		padding: 0;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	a {
+		text-decoration: none;
+	}
+	body {
+		background-color: #eee;
+	}
+	#Topbar {
+		z-index: 1;
+		position: fixed;
+		width: 100%;
+		height: 30px;
+		background: orange;
+		font-weight: 600;
+		color: #FFFFFF;
+	}
+	/*	#Sidebar {
+		float: left;
+		position: relative;
+		min-width: 100px;
+		height: 100%;
+		width: 15%;
+		background-color: black; 
+	}*/
+	#TabView {
+		height: 100%;
+		margin: 0 auto;
+		width: 75%;
+		min-width: 500px;
+		overflow: hidden;
+		background-color: #fff;
+	}
+
+/*Top Bar*/
+	#SearchBar {
+		width: 30%;
+		height: 30px;
+		float: right;
+		overflow: hidden;
+	}
+	#SearchBar input {
+		width: 970px;
+		height: 30px;
+	}
+	#SearchBar ul {
+		position: fixed;
+		list-style: none;
+		top: 30px;
+		right: 0;
+		width: 30%;
+		float: right;
+	}
+	#SearchBar ul li {
+		background-color: orange;
+		width: 100%;
+		float:none;
+		height: 30px;
+		line-height: 30px;
+	}
+	#SearchBar ul li:hover {
+		background-color: darkorange;
+	}
+	#Searchicon {
+		width: 30px;
+		height: 30px;
+		background-color: #000000;
+		position: relative;
+		float: left;
+	}
+	#TabSelector {
+		list-style: none;
+		position: relative;
+		float: left;
+		margin :0;
+		padding:0;
+		width: 70%;
+		min-width: 400px;
+	}
+	#TabSelector li {
+		text-align: center;
+		display: block;
+		padding:0;
+		position: relative;
+		float: left;
+		margin:0;
+		width: 20%;
+		height: 30px;
+		line-height: 30px;
+	}
+	#TabSelector li:hover {
+		background-color:darkorange;
+	}
+	#TabSelector li.active {
+		background-color:darkorange;
+	}
+	#HubList ul {
+		display: none;
+		position: absolute;
+		top: 100%;
+		width: 100%;
+		left: 0;
+		background: #fff;
+		padding :0;
+	}
+	#HubList:hover > ul {
+		display:block;
+	}
+	#HubList ul li {
+		background-color: orange;
+		width: 100%;
+		float: none;
+	}
+
+/*Main View*/
+	.Tab {
+		z-index: 0;
+		position: relative;
+		top: 30px;
+		height: 100%;
+		/*background-color:#ffffff;*/
+		/*overflow: scroll;*/
+	}
+	#TabHome, #TabMatches, #TabHubs {
+		display: none;
+	}
+
+/*Home Tab*/
+/*Profile Tab*/
+	#ProfileTop {
+		padding: 20px;
+	}
+	#ProfileIcon {
+		width: 150px;
+		height: 150px;
+		background-size: cover;
+		border-radius: 75px;
+		-webkit-border-radius: 75px;
+		-moz-border-radius: 75px;
+		box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+		float: left;
+	}
+	#ProfileName {
+		padding-left: 170px;
+		height: 150px;
+		line-height: 150px;
+		font-size: 36pt;
+
+	}
+	#ProfileInfo {
+		padding-left: 30px;
+	}
+	#ProfileInfo > div {
+		overflow: auto;
+		padding: 5 0px;
+	}
+	#ProfileInfo > div > div{
+		line-height: 20px;
+		float: left;
+		min-width: 200px;
+		width: 50%;
+	}
+	#ProfileInfo label {
+		height: 20px;
+		line-height :20px;
+		font-size: 18px;
+		width :100px;
+		clear: left;
+		text-align: left;
+		float: left;
+	}
+	#ProfileBio {
+		display: none;
+	}
+	#ProfileLikes {
+		border-radius: 15px;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		color: white;
+		background-color: orange;
+		width: 90%;
+		min-width: 500px;
+		margin: 20px auto;
+		height: 200px;
+	}
+	#ProfileLikes > div{
+		font-size: 18px;
+		padding: 10px 20px; 
+	}
+	#ProfileLikes li {
+		width: 20%;
+		height: 100px;
+		margin: 20px 2.5%;
+		list-style: none;
+		float: left;
+		text-align: center;
+	}
+	#ProfileLikes img {
+		width: 70px;
+		height: 70px;
+		border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+	}
+/*Matches Tab*/
+/*Hubs Tab*/
+	#PostBar {
+		width: 100%;
+		height: 30px;
+		background-color: orange;
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+	#InputTitle {
+		position: relative;
+		left: 25%;
+		font-size: 12pt;
+		text-align: center;
+		width: 40%;
+		height: 30px;
+		float: left;
+	}
+	#Like, #Unlike {
+		position: relative;
+		float: left;
+		left: 25%;
+		height: 30px;
+		width: 10%;
+	}
+	#InputImage, #InputCaption {
+		display: none;
+	}
+	#PostForm {
+		background-color: orange;
+		width: 100%;
+		height: 0px;
+		overflow: hidden;
+	}
+	#PostForm > div {
+		height: 20px;
+		padding: 5px;
+	}
+	#PostForm button {
+		height: 20px;
+		line-height: 20px;
+		font-size: 12px;
+		width: 50px;
+		text-align: center;
+		float: left;
+	}
+	#PostForm label {
+		height: 20px;
+		line-height :20px;
+		font-size: 18px;
+		width :105px;
+		clear: left;
+		text-align: left;
+		float: left;
+	}
+	#PostForm input[type="text"] {
+		height: 20px;
+		float: left;
+		width: 150px;
+	}
+	#InputType input {
+		height: 15px;
+		width: 15px;
+		padding: 0px;
+	}
+	#Posts {
+		position: absolute;
+		top: 30px;
+		bottom: 30px;
+		width: 100%;
+		overflow-y: auto;
+	}
+	.Post:hover {
+		background-color: #eee;
+	}
+	.Post {
+		border-radius: 5px;
+		margin: 1%;
+		float: left;
+		width: 48%;
+		box-shadow: 0 0 4px rgba(0, 0, 0, .8);
+		-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .8);
+		-moz-box-shadow: 0 0 4px rgba(0, 0, 0, .8);
+		overflow: hidden;
+	}
+	.PostTitle {
+		padding-left: 10px;
+		color: white;
+		font-weight: 600;
+		font-size: 14pt;
+		height: 30px;
+		line-height: 30px;
+		background-color: orange;
+	}
+	.PostText {
+		padding-left: 10px;
+		margin: 10px 0;
+	}
+	.PostImage {
+		margin: 10px 0;
+		width: 100%;
+		min-height: 0;
+		height: auto;
+	}
+	.PostCaption {
+		padding-left: 10px;
+		margin-bottom: 10px;
+	}
+	.PostAuthor {
+		color: white;
+		padding-left: 10px;
+		position: relative;
+		width: 50%;
+		background-color: orange;
+		border-top-right-radius: 10px;
+	}
+
+/*Login/Create Page*/
+	#MainWrapper {
+		height: 100%;
+		margin: 0 auto;
+		width: 75%;
+		min-width: 500px;
+		background-color: darkorange;
+	}
+	#FormTitle {
+		position: relative;
+		top: 50px;
+		width: 100%;
+		font-size: 50px;
+		color: white;
+		background: orange;
+		text-align: center;
+		height: 100px;
+		line-height: 100px;
+	}
+	#FormWrapper {
+		position: relative;
+		top: 150px;
+		background: orange;
+		width: 100%;
+		height: auto;
+		padding-bottom: 30px;
+	}
+	#FormWrapper div {
+		width: 100%;
+		height: 30px;
+		padding: 15px;
+	}
+	#FormWrapper button {
+		height: 30px;
+		line-height: 30px;
+		font-size: 18px;
+		width: 100px;
+		text-align: center;
+	}
+	#FormWrapper label {
+		height: 30px;
+		line-height :30px;
+		font-size: 24px;
+		width :210px;
+		clear: left;
+		text-align: left;
+		float: left;
+	}
+	#FormWrapper input {
+		height: 30px;
+		float: left;
+		width: 230px;
+	}
+	#ImageSubmit {
+		display: none;
+	}
+	#SexForm Select {
+		height: 30px;
+		width: 230px;
+		float: left;
+	}
+	#DOBForm Select {
+		height:30px;
+		width: 70px;
+		margin-right: 10px;
+		float: left;
+	}
+	#Creating {
+		display: none;
+		font-size: 24px;
+	}
+	#Redirect {
+		display: none;
+		padding: 15px;
+	}
+	#Redirect button {
+		width: 210px;
+		height: 30px;
+	}
+	#CreateWrapper {
+		padding:10px 15px;
+		top:150px;
+		position:relative;
+	}
+	#CreateWrapper button{
+		height: 20px;
+		margin-left: 5px;
+		width: 100px;
+		position:relative;
+	}
