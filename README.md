@@ -93,7 +93,7 @@ This program allows you to create an account, like and unlike a set of intrests,
 ##0.1.2: Redirect
  - Set up index page to be redirected to after login, creates cookie to check on page enter
 
-##0.10.1: Login process
+##0.1.1: Login process
  - Implemented Login and logout procedure
 
 ##0.1.0: Find user
