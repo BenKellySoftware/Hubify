@@ -5,6 +5,9 @@ built for my year 12 software development and design major work.
 
 This program allows you to create an account, like and unlike a set of intrests, and post to those intrest's hubs.
 
+# Run
+To run locally type 'node index.js' while in the src folder
+
 # Release Notes
 
 ##1.0.0: Beta release
