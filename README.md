@@ -5,6 +5,11 @@ built for my year 12 software development and design major work.
 
 This program allows you to create an account, like and unlike a set of intrests, and post to those intrest's hubs.
 
+Link to the Heroku hosting:
+https://friendzone-js-1024.herokuapp.com
+
+Available likes are anime, comics, computers, movies, snowboarding, tv, video games. Once your profile is created just search for them to make posts and like them to add them to your profile.
+
 # Run
 To run locally type 'node index.js' while in the src folder
 
